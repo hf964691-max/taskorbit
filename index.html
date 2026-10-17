@@ -8,39 +8,56 @@
     <link rel="stylesheet" href="./css/utils.css" />
   </head>
   <body>
-    <div class="header">
-      <h1>Welcome to My Task Orbit App</h1>
-    </div>
-    <div class="todo-container">
-      <form>
-        <input type="text" id="input-task" placeholder="Enter your task..." />
-        <button type="submit">Add</button>
-      </form>
-      <div id="results">
-        <ul id="result">
-          <li>
-            <input type="checkbox" /><span class="text">Home Work</span
-            ><button class="edit-btn">Edit</button
-            ><button class="del-btn">Delete</button>
-          </li>
-          <li>
-            <input type="checkbox" /><span class="text">Home Work</span
-            ><button class="edit-btn">Edit</button
-            ><button class="del-btn">Delete</button>
-          </li>
-          <li>
-            <input type="checkbox" /><span class="text">Home Work</span
-            ><button class="edit-btn">Edit</button
-            ><button class="del-btn">Delete</button>
-          </li>
-          <li>
-            <input type="checkbox" /><span class="text">Home Work</span
-            ><button class="edit-btn">Edit</button
-            ><button class="del-btn">Delete</button>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <main class="app-shell">
+      <header class="header">
+        <p class="eyebrow">Your personal planner</p>
+        <h1>Make room for what matters.</h1>
+        <p class="subtitle">Gather your next steps in one calm, focused space.</p>
+      </header>
+      <section class="todo-container" aria-label="Task planner">
+        <form aria-label="Add a task">
+          <input
+            type="text"
+            id="input-task"
+            placeholder="What would you like to get done?"
+            aria-label="Task name"
+          />
+          <button type="submit">Add task</button>
+        </form>
+        <section id="results" aria-labelledby="tasks-title">
+          <div class="tasks-heading">
+            <h2 id="tasks-title">Your tasks</h2>
+            <span class="task-count">4 tasks</span>
+          </div>
+          <ul id="result">
+            <li>
+              <input type="checkbox" aria-label="Mark Home Work 1 complete" />
+              <span class="text">Home Work</span>
+              <button class="edit-btn" type="button">Edit</button>
+              <button class="del-btn" type="button">Delete</button>
+            </li>
+            <li>
+              <input type="checkbox" aria-label="Mark Home Work 2 complete" />
+              <span class="text">Home Work</span>
+              <button class="edit-btn" type="button">Edit</button>
+              <button class="del-btn" type="button">Delete</button>
+            </li>
+            <li>
+              <input type="checkbox" aria-label="Mark Home Work 3 complete" />
+              <span class="text">Home Work</span>
+              <button class="edit-btn" type="button">Edit</button>
+              <button class="del-btn" type="button">Delete</button>
+            </li>
+            <li>
+              <input type="checkbox" aria-label="Mark Home Work 4 complete" />
+              <span class="text">Home Work</span>
+              <button class="edit-btn" type="button">Edit</button>
+              <button class="del-btn" type="button">Delete</button>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
 
     <script type="module" src="./js/app.mjs"></script>
   </body>
